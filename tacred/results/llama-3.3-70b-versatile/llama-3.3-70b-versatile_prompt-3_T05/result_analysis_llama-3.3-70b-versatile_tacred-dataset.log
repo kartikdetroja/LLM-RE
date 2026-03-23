@@ -1,0 +1,95 @@
+##############################################################################################################
+Configurations:
+
+dataset  =  tacred-dataset
+model_name  =  llama-3.3-70b-versatile
+temperature  =  0.5
+top_p  =  0.9
+max_new_tokens  =  150
+stream  =  False
+num_return_sequences  =  1
+prompt_ver  =  prompt_3
+prompt  =  ----
+You are an expert linguist assisting with the Relationship Extraction task. The task is to find out the relationship between the head entity and the tail entity in the given sentence. The assigned relationship must be in (PERSON-TITLE, ORGANIZATION-TOP_MEMBERS_OR_EMPLOYEES, PERSON-EMPLOYEE_OF, ORGANIZATION-ALTERNATE_NAMES, ORGANIZATION-COUNTRY_OF_HEADQUARTERS, PERSON-COUNTRIES_OF_RESIDENCE, ORGANIZATION-CITY_OF_HEADQUARTERS, PERSON-CITIES_OF_RESIDENCE, PERSON-AGE, PERSON-STATE_OR_PROVINCES_OF_RESIDENCE, PERSON-ORIGIN, ORGANIZATION-SUBSIDIARIES, ORGANIZATION-PARENTS, PERSON-SPOUSE, ORGANIZATION-STATE_OR_PROVINCE_OF_HEADQUARTERS, PERSON-CHILDREN, PERSON-OTHER_FAMILY, PERSON-ALTERNATE_NAMES, ORGANIZATION-MEMBERS, PERSON-SIBLINGS, PERSON-SCHOOLS_ATTENDED, PERSON-PARENTS, PERSON-DATE_OF_DEATH, ORGANIZATION-MEMBER_OF, ORGANIZATION-FOUNDED_BY, ORGANIZATION-WEBSITE, PERSON-CAUSE_OF_DEATH, ORGANIZATION-POLITICAL_OR_RELIGIOUS_AFFILIATION, ORGANIZATION-FOUNDED, PERSON-CITY_OF_DEATH, ORGANIZATION-SHAREHOLDERS, ORGANIZATION-NUMBER_OF_EMPLOYEES_OR_MEMBERS, PERSON-DATE_OF_BIRTH, PERSON-CITY_OF_BIRTH, PERSON-CHARGES, PERSON-STATE_OR_PROVINCE_OF_DEATH, PERSON-RELIGION, PERSON-STATE_OR_PROVINCE_OF_BIRTH, PERSON-COUNTRY_OF_BIRTH, ORGANIZATION-DISSOLVED, PERSON-COUNTRY_OF_DEATH, NO_RELATION).
+When the relationship between the head entity and the tail entity cannot be identified from one of the relationships listed above, you must assign the relationship as NO_RELATION.
+You will generate response in the form: In the given sentence, the relationship between <head-entity> and <tail-entity> entities is: <best from the list of relationships>. 
+----
+Here are some examples of Relationship Extraction task:
+Example-1:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+Example-2:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+Example-3:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+Example-4:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+Example-5:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+----
+Based on above instructions, you need to identify relationship between head and tail entity in the below sentence.
+Sentence: {}
+In the given sentence, the relationship between {} and {} entities is:
+date_time  =  2025-04-08_08-55
+##############################################################################################################
+
+Macro F1 score =  0.45202825665472396
+Precision:  0.509617484464586
+Recall:  0.492436738870317
+
+Weighted F1 score =  0.8187913069871533
+Precision:  0.8547159176067507
+Recall:  0.8015593561368209
+
+Micro F1 score =  0.799147442326981
+Precision:  0.79675
+Recall:  0.8015593561368209
+
+Classwise F1 scores:
+	PERSON-TITLE: 0.78
+	ORGANIZATION-TOP_MEMBERS_OR_EMPLOYEES: 0.62
+	PERSON-EMPLOYEE_OF: 0.47
+	ORGANIZATION-ALTERNATE_NAMES: 0.76
+	ORGANIZATION-COUNTRY_OF_HEADQUARTERS: 0.54
+	PERSON-COUNTRIES_OF_RESIDENCE: 0.44
+	ORGANIZATION-CITY_OF_HEADQUARTERS: 0.57
+	PERSON-CITIES_OF_RESIDENCE: 0.54
+	PERSON-AGE: 0.88
+	PERSON-STATE_OR_PROVINCES_OF_RESIDENCE: 0.0
+	PERSON-ORIGIN: 0.38
+	ORGANIZATION-SUBSIDIARIES: 0.35
+	ORGANIZATION-PARENTS: 0.44
+	PERSON-SPOUSE: 0.41
+	ORGANIZATION-STATE_OR_PROVINCE_OF_HEADQUARTERS: 0.5
+	PERSON-CHILDREN: 0.65
+	PERSON-OTHER_FAMILY: 0.2
+	PERSON-ALTERNATE_NAMES: 0.04
+	ORGANIZATION-MEMBERS: 0.12
+	PERSON-SIBLINGS: 0.71
+	PERSON-SCHOOLS_ATTENDED: 0.53
+	PERSON-PARENTS: 0.61
+	PERSON-DATE_OF_DEATH: 0.25
+	ORGANIZATION-MEMBER_OF: 0.14
+	ORGANIZATION-FOUNDED_BY: 0.53
+	ORGANIZATION-WEBSITE: 0.86
+	PERSON-CAUSE_OF_DEATH: 0.44
+	ORGANIZATION-POLITICAL_OR_RELIGIOUS_AFFILIATION: 0.0
+	ORGANIZATION-FOUNDED: 0.67
+	PERSON-CITY_OF_DEATH: 0.44
+	ORGANIZATION-SHAREHOLDERS: 0.5
+	ORGANIZATION-NUMBER_OF_EMPLOYEES_OR_MEMBERS: 0.4
+	PERSON-DATE_OF_BIRTH: 0.8
+	PERSON-CITY_OF_BIRTH: 0.0
+	PERSON-CHARGES: 0.44
+	PERSON-STATE_OR_PROVINCE_OF_DEATH: 0.29
+	PERSON-RELIGION: 0.5
+	PERSON-STATE_OR_PROVINCE_OF_BIRTH: 0.5
+	PERSON-COUNTRY_OF_BIRTH: 0.0
+	ORGANIZATION-DISSOLVED: 0.0
+	PERSON-COUNTRY_OF_DEATH: 0.8
+	NO_RELATION: 0.88
+##############################################################################################################

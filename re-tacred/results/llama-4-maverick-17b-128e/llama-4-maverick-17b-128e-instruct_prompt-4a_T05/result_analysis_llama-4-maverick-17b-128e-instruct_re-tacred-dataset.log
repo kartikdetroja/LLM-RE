@@ -1,0 +1,117 @@
+##############################################################################################################
+Configurations:
+
+dataset  =  re-tacred-dataset
+model_name  =  meta-llama/llama-4-maverick-17b-128e-instruct
+temperature  =  0.5
+top_p  =  0.9
+max_new_tokens  =  450
+stream  =  False
+num_return_sequences  =  1
+prompt_ver  =  prompt_4a
+prompt  =  ----
+You are an expert linguist assisting with the Relationship Extraction task. The task is to find out the relationship between the head entity and the tail entity in the given sentence. The assigned relationship must be in (PERSON-TITLE, ORGANIZATION-TOP_MEMBERS_OR_EMPLOYEES, PERSON-EMPLOYEE_OF, ORGANIZATION-ALTERNATE_NAMES, ORGANIZATION-COUNTRY_OF_BRANCH, PERSON-COUNTRIES_OF_RESIDENCE, ORGANIZATION-CITY_OF_BRANCH, PERSON-CITIES_OF_RESIDENCE, PERSON-AGE, PERSON-STATE_OR_PROVINCES_OF_RESIDENCE, PERSON-ORIGIN, PERSON-SPOUSE, ORGANIZATION-STATE_OR_PROVINCE_OF_BRANCH, PERSON-CHILDREN, PERSON-OTHER_FAMILY, PERSON-IDENTITY, ORGANIZATION-MEMBERS, PERSON-SIBLINGS, PERSON-SCHOOLS_ATTENDED, PERSON-PARENTS, PERSON-DATE_OF_DEATH, ORGANIZATION-MEMBER_OF, ORGANIZATION-FOUNDED_BY, ORGANIZATION-WEBSITE, PERSON-CAUSE_OF_DEATH, ORGANIZATION-POLITICAL_OR_RELIGIOUS_AFFILIATION, ORGANIZATION-FOUNDED, PERSON-CITY_OF_DEATH, ORGANIZATION-SHAREHOLDERS, ORGANIZATION-NUMBER_OF_EMPLOYEES_OR_MEMBERS, PERSON-DATE_OF_BIRTH, PERSON-CITY_OF_BIRTH, PERSON-CHARGES, PERSON-STATE_OR_PROVINCE_OF_DEATH, PERSON-RELIGION, PERSON-STATE_OR_PROVINCE_OF_BIRTH, PERSON-COUNTRY_OF_BIRTH, ORGANIZATION-DISSOLVED, PERSON-COUNTRY_OF_DEATH, NO_RELATION).
+When the relationship between the head entity and the tail entity cannot be identified from one of the relationships listed above, you must assign the relationship as NO_RELATION.
+You will generate response in the form: In the given sentence, the relationship between <head-entity> and <tail-entity> entities is: <best from the list of relationships>. 
+----
+Here are some examples with Chain of Thoughts (COT) for the Relationship Extraction task:
+Example-1:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+COT Exaplanation: {}
+Example-2:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+COT Exaplanation: {}
+Example-3:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+COT Exaplanation: {}
+Example-4:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+COT Exaplanation: {}
+Example-5:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+COT Exaplanation: {}
+Example-6:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+COT Exaplanation: {}
+Example-7:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+COT Exaplanation: {}
+Example-8:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+COT Exaplanation: {}
+Example-9:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+COT Exaplanation: {}
+Example-10:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+COT Exaplanation: {}
+----
+Sentence: {}
+In the given sentence, the relationship between {} and {} entities is:
+date_time  =  2025-07-26_07-37
+##############################################################################################################
+
+Macro F1 score =  0.6247163329917574
+Precision:  0.6238693454096769
+Recall:  0.6624352746127646
+
+Weighted F1 score =  0.8429579225840869
+Precision:  0.857317651985159
+Recall:  0.8375394321766562
+
+Micro F1 score =  0.8317296934437235
+Precision:  0.826
+Recall:  0.8375394321766562
+
+Classwise F1 scores:
+	PERSON-TITLE: 0.8
+	ORGANIZATION-TOP_MEMBERS_OR_EMPLOYEES: 0.67
+	PERSON-EMPLOYEE_OF: 0.66
+	ORGANIZATION-ALTERNATE_NAMES: 0.86
+	ORGANIZATION-COUNTRY_OF_BRANCH: 0.78
+	PERSON-COUNTRIES_OF_RESIDENCE: 0.58
+	ORGANIZATION-CITY_OF_BRANCH: 0.0
+	PERSON-CITIES_OF_RESIDENCE: 0.58
+	PERSON-AGE: 0.95
+	PERSON-STATE_OR_PROVINCES_OF_RESIDENCE: 0.0
+	PERSON-ORIGIN: 0.55
+	PERSON-SPOUSE: 0.81
+	ORGANIZATION-STATE_OR_PROVINCE_OF_BRANCH: 0.83
+	PERSON-CHILDREN: 0.53
+	PERSON-OTHER_FAMILY: 0.58
+	PERSON-IDENTITY: 0.87
+	ORGANIZATION-MEMBERS: 0.33
+	PERSON-SIBLINGS: 0.87
+	PERSON-SCHOOLS_ATTENDED: 0.76
+	PERSON-PARENTS: 0.82
+	PERSON-DATE_OF_DEATH: 0.81
+	ORGANIZATION-MEMBER_OF: 0.37
+	ORGANIZATION-FOUNDED_BY: 0.76
+	ORGANIZATION-WEBSITE: 0.83
+	PERSON-CAUSE_OF_DEATH: 0.67
+	ORGANIZATION-POLITICAL_OR_RELIGIOUS_AFFILIATION: 0.38
+	ORGANIZATION-FOUNDED: 0.96
+	PERSON-CITY_OF_DEATH: 0.71
+	ORGANIZATION-SHAREHOLDERS: 0.25
+	ORGANIZATION-NUMBER_OF_EMPLOYEES_OR_MEMBERS: 0.6
+	PERSON-DATE_OF_BIRTH: 0.86
+	PERSON-CITY_OF_BIRTH: 0.25
+	PERSON-CHARGES: 0.8
+	PERSON-STATE_OR_PROVINCE_OF_DEATH: 0.62
+	PERSON-RELIGION: 0.67
+	PERSON-STATE_OR_PROVINCE_OF_BIRTH: 0.8
+	PERSON-COUNTRY_OF_BIRTH: 0.0
+	ORGANIZATION-DISSOLVED: 0.0
+	PERSON-COUNTRY_OF_DEATH: 0.94
+	NO_RELATION: 0.88
+##############################################################################################################
