@@ -1,0 +1,71 @@
+##############################################################################################################
+Configurations:
+
+dataset  =  semeval2010-task8-dataset
+model_name  =  meta-llama/llama-4-maverick-17b-128e-instruct
+temperature  =  0.5
+top_p  =  0.9
+max_new_tokens  =  400
+stream  =  False
+num_return_sequences  =  1
+prompt_ver  =  prompt_1
+prompt  =  ----
+You are an expert linguist assisting with the Relationship Extraction task. The task is to find out the relationship between the head entity and the tail entity in the given sentence. The assigned relationship must be in (CAUSE-EFFECT, COMPONENT-WHOLE, CONTENT-CONTAINER, ENTITY-DESTINATION, ENTITY-ORIGIN, INSTRUMENT-AGENCY, MEMBER-COLLECTION, MESSAGE-TOPIC, PRODUCT-PRODUCER, NONE).
+When the relationship between the head entity and the tail entity cannot be identified from one of the relationships listed above, you must assign the relationship as NONE.
+You will generate a response in the form: In the given sentence, the relationship between <head-entity> and <tail-entity> entities is: <best from the list of relationships>.
+----
+Sentence: {}
+In the given sentence, the relationship between {} and {} entities is:
+date_time  =  2025-07-19_07-28
+############################################################################################################## 
+
+                                               Confusion Matrix                                                
+
+        CE      CW      CC      ED      EO      IA      MC      MT      PP      NN      IV      TOTAL   
+--------------------------------------------------------------------------------------------------------------
+CE      300     5       0       0       7       2       0       4       7       3       0       328             
+CW      0       288     7       0       1       7       2       5       2       0       0       312             
+CC      0       3       189     0       0       0       0       0       0       0       0       192     A       
+ED      1       8       139     121     1       0       2       9       1       9       1       292     C       
+EO      2       42      31      12      121     0       3       14      23      7       3       258     T       
+IA      0       7       2       0       0       132     0       7       3       4       1       156     U       
+MC      0       56      11      0       1       1       152     5       1       3       3       233     A       
+MT      2       2       12      0       1       2       0       235     3       0       4       261     L       
+PP      3       9       0       1       4       10      2       10      179     3       10      231             
+NN      38      89      49      21      19      45      30      61      26      76      0       454             
+IV      0       0       0       0       0       0       0       0       0       0       0       0               
+--------------------------------------------------------------------------------------------------------------
+TOTAL   346     509     440     155     155     199     191     350     245     105     22      2717    
+
+                                              P R E D I C T E D                                               
+
+
+Total number of Examples:  2717 
+
+##############################################################################################################
+
+Macro F1 score =  0.5973749729743532
+Precision:  0.6371528696170684
+Recall:  0.6406047307282763
+
+Weighted F1 score =  0.6315792360214829
+Precision:  0.7119176632071496
+Recall:  0.560219028340081
+
+Micro F1 score =  0.560219028340081
+Precision:  0.560219028340081
+Recall:  0.560219028340081
+
+Classwise F1 scores:
+	CAUSE-EFFECT: 0.89
+	COMPONENT-WHOLE: 0.7
+	CONTENT-CONTAINER: 0.6
+	ENTITY-DESTINATION: 0.54
+	ENTITY-ORIGIN: 0.59
+	INSTRUMENT-AGENCY: 0.74
+	MEMBER-COLLECTION: 0.72
+	MESSAGE-TOPIC: 0.77
+	PRODUCT-PRODUCER: 0.75
+	NONE: 0.27
+	INVALID: 0.0
+##############################################################################################################

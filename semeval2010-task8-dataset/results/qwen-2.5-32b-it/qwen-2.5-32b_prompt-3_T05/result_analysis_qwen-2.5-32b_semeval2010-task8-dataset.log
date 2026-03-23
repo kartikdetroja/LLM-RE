@@ -1,0 +1,89 @@
+##############################################################################################################
+Configurations:
+
+dataset  =  semeval2010-task8-dataset
+model_name  =  qwen-2.5-32b
+temperature  =  0.5
+top_p  =  0.9
+max_new_tokens  =  100
+stream  =  False
+num_return_sequences  =  1
+prompt_ver  =  prompt_3
+prompt  =  ----
+You are an expert linguist assisting with the Relationship Extraction task. The task is to find out the relationship between the head entity and the tail entity in the given sentence. The assigned relationship must be in (CAUSE-EFFECT, COMPONENT-WHOLE, CONTENT-CONTAINER, ENTITY-DESTINATION, ENTITY-ORIGIN, INSTRUMENT-AGENCY, MEMBER-COLLECTION, MESSAGE-TOPIC, PRODUCT-PRODUCER, NONE). 
+When the relationship between the head entity and the tail entity cannot be identified from one of the relationships listed above, you must assign the relationship as NONE.
+You will generate response in the form: In the given sentence, the relationship between <head-entity> and <tail-entity> entities is: <best from the list of relationships>. 
+----
+Here are some examples of Relationship Extraction task:
+Example-1:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+Example-2:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+Example-3:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+Example-4:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+Example-5:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+----
+Based on above instructions, you need to identify relationship between head and tail entity in the below sentence.
+Sentence: {}
+In the given sentence, the relationship between {} and {} entities is:
+date_time  =  2025-03-21_05-34
+############################################################################################################## 
+
+                                               Confusion Matrix                                                
+
+        CE      CW      CC      ED      EO      IA      MC      MT      PP      NN      IV      TOTAL   
+--------------------------------------------------------------------------------------------------------------
+CE      308     5       1       0       5       1       0       0       6       2       0       328             
+CW      1       289     11      0       1       3       2       1       0       4       0       312             
+CC      0       4       175     10      1       0       0       0       0       2       0       192     A       
+ED      2       12      47      214     0       2       1       2       1       11      0       292     C       
+EO      13      14      15      6       163     0       0       2       20      25      0       258     T       
+IA      2       4       1       2       1       109     0       0       4       33      0       156     U       
+MC      0       28      7       1       1       0       166     1       2       27      0       233     A       
+MT      7       11      35      1       3       1       0       168     2       33      0       261     L       
+PP      4       8       1       1       7       15      3       3       160     29      0       231             
+NN      39      66      30      44      24      23      21      24      25      158     0       454             
+IV      0       0       0       0       0       0       0       0       0       0       0       0               
+--------------------------------------------------------------------------------------------------------------
+TOTAL   376     441     323     279     206     154     193     201     220     324     0       2717    
+
+                                              P R E D I C T E D                                               
+
+
+Total number of Examples:  2717 
+
+##############################################################################################################
+
+Macro F1 score =  0.645445600105543
+Precision:  0.6539276730942615
+Recall:  0.6579022916617613
+
+Weighted F1 score =  0.6943417746100445
+Precision:  0.708004860539411
+Recall:  0.7029812292970188
+
+Micro F1 score =  0.7029812292970188
+Precision:  0.7029812292970188
+Recall:  0.7029812292970188
+
+Classwise F1 scores:
+	CAUSE-EFFECT: 0.88
+	COMPONENT-WHOLE: 0.77
+	CONTENT-CONTAINER: 0.68
+	ENTITY-DESTINATION: 0.75
+	ENTITY-ORIGIN: 0.7
+	INSTRUMENT-AGENCY: 0.7
+	MEMBER-COLLECTION: 0.78
+	MESSAGE-TOPIC: 0.73
+	PRODUCT-PRODUCER: 0.71
+	NONE: 0.41
+	INVALID: 0.0
+##############################################################################################################

@@ -1,0 +1,104 @@
+##############################################################################################################
+Configurations:
+
+dataset  =  semeval2010-task8-dataset
+model_name  =  qwen-2.5-32b
+temperature  =  0.5
+top_p  =  0.9
+max_new_tokens  =  100
+stream  =  False
+num_return_sequences  =  1
+prompt_ver  =  prompt_3a
+prompt  =  ----
+You are an expert linguist assisting with the Relationship Extraction task. The task is to find out the relationship between the head entity and the tail entity in the given sentence. The assigned relationship must be in (CAUSE-EFFECT, COMPONENT-WHOLE, CONTENT-CONTAINER, ENTITY-DESTINATION, ENTITY-ORIGIN, INSTRUMENT-AGENCY, MEMBER-COLLECTION, MESSAGE-TOPIC, PRODUCT-PRODUCER, NONE). 
+When the relationship between the head entity and the tail entity cannot be identified from one of the relationships listed above, you must assign the relationship as NONE.
+You will generate response in the form: In the given sentence, the relationship between <head-entity> and <tail-entity> entities is: <best from the list of relationships>. 
+----
+Here are some examples of Relationship Extraction task:
+Example-1:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+Example-2:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+Example-3:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+Example-4:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+Example-5:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+Example-6:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+Example-7:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+Example-8:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+Example-9:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+Example-10:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+----
+Based on above instructions, you need to identify relationship between head and tail entity in the below sentence.
+Sentence: {}
+In the given sentence, the relationship between {} and {} entities is:
+date_time  =  2025-03-26_09-55
+############################################################################################################## 
+
+                                               Confusion Matrix                                                
+
+        CE      CW      CC      ED      EO      IA      MC      MT      PP      NN      IV      TOTAL   
+--------------------------------------------------------------------------------------------------------------
+CE      305     1       0       0       4       1       0       1       10      6       0       328             
+CW      1       286     12      1       1       4       2       1       1       3       0       312             
+CC      0       3       177     10      1       0       0       0       0       1       0       192     A       
+ED      2       12      37      220     0       3       2       2       1       13      0       292     C       
+EO      12      9       13      5       175     0       0       1       15      28      0       258     T       
+IA      0       3       1       2       1       114     0       0       2       33      0       156     U       
+MC      0       25      6       1       1       0       176     1       2       21      0       233     A       
+MT      7       10      17      2       1       2       0       188     1       33      0       261     L       
+PP      4       6       0       2       6       11      2       3       172     25      0       231             
+NN      37      50      33      40      23      26      22      29      26      168     0       454             
+IV      0       0       0       0       0       0       0       0       0       0       0       0               
+--------------------------------------------------------------------------------------------------------------
+TOTAL   368     405     296     283     213     161     204     226     230     331     0       2717    
+
+                                              P R E D I C T E D                                               
+
+
+Total number of Examples:  2717 
+
+##############################################################################################################
+
+Macro F1 score =  0.670815497611836
+Precision:  0.6718171417977089
+Recall:  0.6837465722839217
+
+Weighted F1 score =  0.720981387980896
+Precision:  0.7279072391494024
+Recall:  0.729112992270887
+
+Micro F1 score =  0.729112992270887
+Precision:  0.729112992270887
+Recall:  0.729112992270887
+
+Classwise F1 scores:
+	CAUSE-EFFECT: 0.88
+	COMPONENT-WHOLE: 0.8
+	CONTENT-CONTAINER: 0.73
+	ENTITY-DESTINATION: 0.77
+	ENTITY-ORIGIN: 0.74
+	INSTRUMENT-AGENCY: 0.72
+	MEMBER-COLLECTION: 0.81
+	MESSAGE-TOPIC: 0.77
+	PRODUCT-PRODUCER: 0.75
+	NONE: 0.43
+	INVALID: 0.0
+##############################################################################################################

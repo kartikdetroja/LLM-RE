@@ -1,0 +1,71 @@
+##############################################################################################################
+Configurations:
+
+dataset  =  semeval2010-task8-dataset
+model_name  =  qwen/qwen3-32b
+temperature  =  0.5
+top_p  =  0.9
+max_new_tokens  =  300
+stream  =  False
+num_return_sequences  =  1
+prompt_ver  =  prompt_1
+prompt  =  ----
+You are an expert linguist assisting with the Relationship Extraction task. The task is to find out the relationship between the head entity and the tail entity in the given sentence. The assigned relationship must be in (CAUSE-EFFECT, COMPONENT-WHOLE, CONTENT-CONTAINER, ENTITY-DESTINATION, ENTITY-ORIGIN, INSTRUMENT-AGENCY, MEMBER-COLLECTION, MESSAGE-TOPIC, PRODUCT-PRODUCER, NONE).
+When the relationship between the head entity and the tail entity cannot be identified from one of the relationships listed above, you must assign the relationship as NONE.
+You will generate a response in the form: In the given sentence, the relationship between <head-entity> and <tail-entity> entities is: <best from the list of relationships>.
+----
+Sentence: {}
+In the given sentence, the relationship between {} and {} entities is:
+date_time  =  2025-07-18_07-18
+############################################################################################################## 
+
+                                               Confusion Matrix                                                
+
+        CE      CW      CC      ED      EO      IA      MC      MT      PP      NN      IV      TOTAL   
+--------------------------------------------------------------------------------------------------------------
+CE      322     1       0       0       1       0       0       0       0       0       4       328             
+CW      0       306     0       0       0       2       0       0       0       2       2       312             
+CC      0       0       190     0       0       0       0       0       0       0       2       192     A       
+ED      0       0       0       260     0       0       0       0       0       0       32      292     C       
+EO      0       0       1       0       215     0       0       0       0       0       42      258     T       
+IA      0       0       0       0       0       144     0       0       0       0       12      156     U       
+MC      0       8       1       0       0       0       182     1       0       0       41      233     A       
+MT      0       0       1       0       0       0       0       215     0       0       45      261     L       
+PP      0       0       0       0       1       0       0       0       208     0       22      231             
+NN      1       2       0       0       0       1       0       0       0       450     0       454             
+IV      0       0       0       0       0       0       0       0       0       0       0       0               
+--------------------------------------------------------------------------------------------------------------
+TOTAL   323     317     193     260     217     147     182     216     208     452     202     2717    
+
+                                              P R E D I C T E D                                               
+
+
+Total number of Examples:  2717 
+
+##############################################################################################################
+
+Macro F1 score =  0.8605983715996519
+Precision:  0.900725500576533
+Recall:  0.8268521903032848
+
+Weighted F1 score =  0.9510470818175227
+Precision:  0.9913120460795003
+Recall:  0.897188075082812
+
+Micro F1 score =  0.897188075082812
+Precision:  0.897188075082812
+Recall:  0.897188075082812
+
+Classwise F1 scores:
+	CAUSE-EFFECT: 0.99
+	COMPONENT-WHOLE: 0.97
+	CONTENT-CONTAINER: 0.99
+	ENTITY-DESTINATION: 0.94
+	ENTITY-ORIGIN: 0.91
+	INSTRUMENT-AGENCY: 0.95
+	MEMBER-COLLECTION: 0.88
+	MESSAGE-TOPIC: 0.9
+	PRODUCT-PRODUCER: 0.95
+	NONE: 0.99
+	INVALID: 0.0
+##############################################################################################################

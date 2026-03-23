@@ -1,0 +1,113 @@
+##############################################################################################################
+Configurations:
+
+dataset  =  semeval2010-task8-dataset
+model_name  =  qwen/qwen3-32b
+temperature  =  0.5
+top_p  =  0.9
+max_new_tokens  =  400
+stream  =  False
+num_return_sequences  =  1
+prompt_ver  =  prompt_4a
+prompt  =  ----
+You are an expert linguist assisting with the Relationship Extraction task. The task is to find out the relationship between the head entity and the tail entity in the given sentence. The assigned relationship must be in (CAUSE-EFFECT, COMPONENT-WHOLE, CONTENT-CONTAINER, ENTITY-DESTINATION, ENTITY-ORIGIN, INSTRUMENT-AGENCY, MEMBER-COLLECTION, MESSAGE-TOPIC, PRODUCT-PRODUCER, NONE). 
+When the relationship between the head entity and the tail entity cannot be identified from one of the relationships listed above, you must assign the relationship as NONE.
+You will generate response in the form: In the given sentence, the relationship between <head-entity> and <tail-entity> entities is: <best from the list of relationships>. 
+----
+Here are some examples with Chain of Thoughts (COT) for the Relationship Extraction task:
+Example-1:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+COT Exaplanation: {}
+Example-2:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+COT Exaplanation: {}
+Example-3:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+COT Exaplanation: {}
+Example-4:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+COT Exaplanation: {}
+Example-5:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+COT Exaplanation: {}
+Example-6:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+COT Exaplanation: {}
+Example-7:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+COT Exaplanation: {}
+Example-8:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+COT Exaplanation: {}
+Example-9:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+COT Exaplanation: {}
+Example-10:
+Sentence: {}
+In the above sentence, the relationship between {} and {} entities is: {}
+COT Exaplanation: {}
+----
+Sentence: {}
+In the given sentence, the relationship between {} and {} entities is:
+date_time  =  2025-07-19_05-35
+############################################################################################################## 
+
+                                               Confusion Matrix                                                
+
+        CE      CW      CC      ED      EO      IA      MC      MT      PP      NN      IV      TOTAL   
+--------------------------------------------------------------------------------------------------------------
+CE      323     0       0       0       1       0       0       0       0       0       4       328             
+CW      0       309     1       0       0       1       0       0       0       0       1       312             
+CC      0       0       191     0       0       0       0       0       0       0       1       192     A       
+ED      0       0       2       278     0       0       0       0       0       0       12      292     C       
+EO      0       0       1       2       246     0       0       1       0       0       8       258     T       
+IA      0       0       0       0       0       155     0       0       0       0       1       156     U       
+MC      0       0       0       0       0       0       222     0       0       0       11      233     A       
+MT      0       0       0       0       0       0       0       246     0       0       15      261     L       
+PP      1       1       0       0       0       0       0       0       222     0       7       231             
+NN      4       2       1       0       1       1       2       0       1       442     0       454             
+IV      0       0       0       0       0       0       0       0       0       0       0       0               
+--------------------------------------------------------------------------------------------------------------
+TOTAL   328     312     196     280     248     157     224     247     223     442     60      2717    
+
+                                              P R E D I C T E D                                               
+
+
+Total number of Examples:  2717 
+
+##############################################################################################################
+
+Macro F1 score =  0.8908263979428693
+Precision:  0.9003838929756025
+Recall:  0.8817264516359871
+
+Weighted F1 score =  0.9802033875653772
+Precision:  0.9914521562306082
+Recall:  0.9694516010305484
+
+Micro F1 score =  0.9694516010305484
+Precision:  0.9694516010305484
+Recall:  0.9694516010305484
+
+Classwise F1 scores:
+	CAUSE-EFFECT: 0.98
+	COMPONENT-WHOLE: 0.99
+	CONTENT-CONTAINER: 0.98
+	ENTITY-DESTINATION: 0.97
+	ENTITY-ORIGIN: 0.97
+	INSTRUMENT-AGENCY: 0.99
+	MEMBER-COLLECTION: 0.97
+	MESSAGE-TOPIC: 0.97
+	PRODUCT-PRODUCER: 0.98
+	NONE: 0.99
+	INVALID: 0.0
+##############################################################################################################

@@ -1,0 +1,83 @@
+##############################################################################################################
+Configurations:
+
+dataset  =  semeval2010-task8-dataset
+model_name  =  gemma2-9b-it
+temperature  =  0.5
+top_p  =  0.9
+max_new_tokens  =  100
+stream  =  False
+num_return_sequences  =  1
+prompt_ver  =  prompt_2
+prompt  =  ----
+You are an expert linguist assisting with the Relationship Extraction task. The task is to find out the relationship between the head entity and the tail entity in the given sentence. The assigned relationship must be in (CAUSE-EFFECT, COMPONENT-WHOLE, CONTENT-CONTAINER, ENTITY-DESTINATION, ENTITY-ORIGIN, INSTRUMENT-AGENCY, MEMBER-COLLECTION, MESSAGE-TOPIC, PRODUCT-PRODUCER, NONE).
+----
+An explaination for each Relationship is given below:
+1. CAUSE-EFFECT relationship occurs when an event or object is considered a cause for an effect. 
+2. COMPONENT-WHOLE relationship occurs when an object has an operational use and is part of a bigger whole.
+3. CONTENT-CONTAINER relationship occurs when an object is physically stored or carried in a container. 
+4. ENTITY-DESTINATION relationship occurs when an entity is moving towards a destination. 
+5. ENTITY-ORIGIN relationship occurs when an entity is coming from or is derived from an origin (position or material). 
+6. INSTRUMENT-AGENCY relationship occurs when an agent uses an instrument. 
+7. MEMBER-COLLECTION relationship occurs when a member is a non-functional part of a collection. 
+8. MESSAGE-TOPIC relationship occurs when a communication message contains information about a topic. 
+9. PRODUCT-PRODUCER relationship occurs when a producer is actively involved in the creation of the product. 
+10. NONE relationship occurs when the relationship between the head entity and the tail entity cannot be categorised in one of the above nine relationships.
+---
+You will generate response in the form: In the given sentence, the relationship between <head-entity> and <tail-entity> entities is: <best from the list of relationships>. 
+----
+Sentence: {}
+In the given sentence, the relationship between {} and {} entities is:
+date_time  =  2025-03-19_09-46
+############################################################################################################## 
+
+                                               Confusion Matrix                                                
+
+        CE      CW      CC      ED      EO      IA      MC      MT      PP      NN      IV      TOTAL   
+--------------------------------------------------------------------------------------------------------------
+CE      313     1       1       0       4       5       0       1       3       0       0       328             
+CW      4       232     46      1       5       11      4       3       6       0       0       312             
+CC      0       0       191     0       0       0       0       0       1       0       0       192     A       
+ED      26      7       132     108     0       1       1       3       6       8       0       292     C       
+EO      13      4       30      16      132     1       1       4       51      6       0       258     T       
+IA      9       3       6       3       0       109     0       4       13      9       0       156     U       
+MC      10      33      49      2       5       3       109     3       6       13      0       233     A       
+MT      51      0       46      0       0       1       0       154     3       6       0       261     L       
+PP      17      3       1       1       2       22      0       18      155     12      0       231             
+NN      139     41      78      26      35      21      25      14      35      40      0       454             
+IV      0       0       0       0       0       0       0       0       0       0       0       0               
+--------------------------------------------------------------------------------------------------------------
+TOTAL   582     324     580     157     183     174     140     204     279     94      0       2717    
+
+                                              P R E D I C T E D                                               
+
+
+Total number of Examples:  2717 
+
+##############################################################################################################
+
+Macro F1 score =  0.5139317800137737
+Precision:  0.5575788746204344
+Recall:  0.5536190402886461
+
+Weighted F1 score =  0.538086924224404
+Precision:  0.606434941842374
+Recall:  0.5679057784320942
+
+Micro F1 score =  0.5679057784320942
+Precision:  0.5679057784320942
+Recall:  0.5679057784320942
+
+Classwise F1 scores:
+	CAUSE-EFFECT: 0.69
+	COMPONENT-WHOLE: 0.73
+	CONTENT-CONTAINER: 0.49
+	ENTITY-DESTINATION: 0.48
+	ENTITY-ORIGIN: 0.6
+	INSTRUMENT-AGENCY: 0.66
+	MEMBER-COLLECTION: 0.58
+	MESSAGE-TOPIC: 0.66
+	PRODUCT-PRODUCER: 0.61
+	NONE: 0.15
+	INVALID: 0.0
+##############################################################################################################
