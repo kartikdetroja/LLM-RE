@@ -24,11 +24,11 @@ LLM-RE_Prompt_Templates.docx file contains prompt templates for Inference and Co
 * Same file is available in the repository: llm-re-semeval2010-task8.ipynb
 
 ###  TACRED Dataset
-* Code for Inference is available at: [https://www.kaggle.com/code/kartikdetroja/llm-re-semeval2010-task8](https://www.kaggle.com/code/kartikdetroja/llm-re-tacred)
+* Code for Inference is available at: [https://www.kaggle.com/code/kartikdetroja/llm-re-tacred](https://www.kaggle.com/code/kartikdetroja/llm-re-tacred)
 * Same file is available in the repository: llm-re-tacred.ipynb
 
 ### RE-TACRED Dataset
-* Code for Inference is available at: [https://www.kaggle.com/code/kartikdetroja/llm-re-semeval2010-task8](https://www.kaggle.com/code/kartikdetroja/llm-re-retacred)
+* Code for Inference is available at: [https://www.kaggle.com/code/kartikdetroja/llm-re-retacred](https://www.kaggle.com/code/kartikdetroja/llm-re-retacred)
 * Same file is available in the repository: llm-re-retacred.ipynb
 
 Results of LLM-RE Framework are available in results folder of respective datasets. Post-processing and result-analysis scripts to compute F1-score are also availalbe in result folder of respective datasets.
