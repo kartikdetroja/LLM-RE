@@ -31,4 +31,7 @@ LLM-RE_Prompt_Templates.docx file contains prompt templates for Inference and Co
 * Code for Inference is available at: [https://www.kaggle.com/code/kartikdetroja/llm-re-retacred](https://www.kaggle.com/code/kartikdetroja/llm-re-retacred)
 * Same file is available in the repository: llm-re-retacred.ipynb
 
-Results of LLM-RE Framework are available in results folder of respective datasets. Post-processing and result-analysis scripts to compute F1-score are also availalbe in result folder of respective datasets.
+
+Dataset preprocessing and label mappings are available in prepare_dataset.py script in respective folder of datasets.
+
+Results of LLM-RE Framework are available in results folder of respective datasets. Post-processing (prepare_result.py) and result-evalutaion/analysis (analyze_result.py) scripts to compute F1-score are also availalbe in result folder of respective datasets.
